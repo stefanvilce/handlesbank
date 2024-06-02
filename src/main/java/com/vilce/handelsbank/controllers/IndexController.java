@@ -17,5 +17,6 @@ public class IndexController {
 	@GetMapping("/")
 	public Index index(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Index(counter.incrementAndGet(), String.format(template, name));
-	}
+	}	
+	
 }
