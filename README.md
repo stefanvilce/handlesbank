@@ -21,5 +21,16 @@ and
 java -jar target\handelsbank-0.0.1-SNAPSHOT.jar
 ```
 
+
+
+## The data package
+
+The data are *hard coded* in two java classes in `com.vilce.handelsbank.data` package. Here we have a list of products and a list of the available discounts:
+ 
+ * Discounts.java 
+ * Watches.java
+ 
+ 
+
  
  
