@@ -6,9 +6,13 @@ import java.util.List;
 import com.vilce.handelsbank.data.Discounts;
 import com.vilce.handelsbank.data.Watches;
 import com.vilce.handelsbank.models.Discount;
+import com.vilce.handelsbank.models.ResponseCheckout;
 import com.vilce.handelsbank.models.Watch;
 
+
+
 public class Utilities {
+	
 	
 	public static Integer calculateThePrice(Watch watch, Integer noPieces) {
 		Integer price = noPieces * watch.getPrice();
@@ -23,6 +27,7 @@ public class Utilities {
 	}
 	
 	
+	
 	public static HashMap<String, Integer> getListWatchesAndQuantity(List<String> list){
 		HashMap<String, Integer> listCheckout = new HashMap<>();
 		for(int i=0; i<list.size(); i++){
@@ -30,6 +35,7 @@ public class Utilities {
 		}
 		return listCheckout;
 	}
+	
 
 	
 	public static HashMap<String, Integer> getTheListOfPricesOnWatchType(HashMap<String, Integer> listCheckout){
@@ -45,5 +51,19 @@ public class Utilities {
 			}
 		}
 		return listCheckoutPrices;
+	}
+	
+	
+	
+	public static ResponseCheckout totalPrice(List<String> list) {
+		HashMap<String, Integer> listCheckout = getListWatchesAndQuantity(list);
+		HashMap<String, Integer> listCheckoutPrices = getTheListOfPricesOnWatchType(listCheckout);
+		Integer totalPrice = 0;
+		for(int i = 0; i < listCheckoutPrices.size(); i++) {
+			totalPrice = totalPrice + listCheckoutPrices.get(listCheckoutPrices.keySet().toArray()[i].toString());
+		}		
+		ResponseCheckout responseCheckout = new ResponseCheckout(totalPrice);
+		
+		return responseCheckout;
 	}
 }

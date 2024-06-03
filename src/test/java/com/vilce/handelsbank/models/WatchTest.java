@@ -24,13 +24,5 @@ class WatchTest {
 		assertEquals("The new name", watch.getName());
 		assertEquals(35, watch.getPrice());		
 	}
-	
-	/*
-	@Test
-	void testIDandPriceType() {
-		
-		assertTrue(watch.getName());
-		assertEquals(35, watch.getPrice());		
-	}*/
 
 }
