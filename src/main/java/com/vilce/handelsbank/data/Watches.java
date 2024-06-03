@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.vilce.handelsbank.models.Watch;
 
-public class Catalog {
+public class Watches {
 	private List<Watch> list = new ArrayList<>();
 
-	public Catalog() {
+	public Watches() {
 		list.add(new Watch("001", "Rolex", 100, "3 for 200"));
 		list.add(new Watch("002", "Michael Kors", 80, "2 for 120"));
 		list.add(new Watch("003", "Swatch", 50, ""));
@@ -18,12 +18,5 @@ public class Catalog {
 	public List<Watch> getList() {
 		return list;
 	}
-
-	@Override
-	public String toString() {
-		return "Catalog [list=" + list + "]";
-	}
 	
-	
-
 }

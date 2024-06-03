@@ -7,6 +7,13 @@ public class Discount {
 	private int priceTotal;	
 	
 	
+	
+	public Discount(String name, int noPieces, int priceTotal) {
+		super();
+		this.name = name;
+		this.noPieces = noPieces;
+		this.priceTotal = priceTotal;
+	}
 	public String getName() {
 		return name;
 	}
