@@ -5,8 +5,14 @@ import java.util.List;
 
 import com.vilce.handelsbank.models.Discount;
 
+
+/**
+ * 
+ * This class should not exist in this variant
+ * 
+ */
 public class Discounts {
-	
+	/*
 	private List<Discount> list = new ArrayList<>();
 
 	public Discounts() {
@@ -25,6 +31,6 @@ public class Discounts {
 	        }
 	    }
 	    return null;
-	}	
+	}	*/
 
 }

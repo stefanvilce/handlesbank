@@ -4,9 +4,9 @@ public class Watch {
 	private String id;
 	private String name;
 	private Integer price;
-	private String discount;
+	private Discount discount;
 	
-	public Watch(String id, String name, Integer price, String discount) {
+	public Watch(String id, String name, Integer price, Discount discount) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,10 +32,10 @@ public class Watch {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	public String getDiscount() {
+	public Discount getDiscount() {
 		return discount;
 	}
-	public void setDiscount(String discount) {
+	public void setDiscount(Discount discount) {
 		this.discount = discount;
 	}
 	

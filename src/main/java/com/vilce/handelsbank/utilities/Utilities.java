@@ -3,7 +3,6 @@ package com.vilce.handelsbank.utilities;
 import java.util.HashMap;
 import java.util.List;
 
-import com.vilce.handelsbank.data.Discounts;
 import com.vilce.handelsbank.data.Watches;
 import com.vilce.handelsbank.models.Discount;
 import com.vilce.handelsbank.models.ResponseCheckout;
@@ -16,9 +15,8 @@ public class Utilities {
 	
 	public static Integer calculateThePrice(Watch watch, Integer noPieces) {
 		Integer price = noPieces * watch.getPrice();
-		if(watch.getDiscount().length() > 0) {
-			Discounts discounts = new Discounts();
-			Discount discount = discounts.findDiscount(watch.getDiscount());
+		if(watch.getDiscount() != null) {
+			Discount discount = watch.getDiscount();
 			if(discount != null) {
 				price = (noPieces / discount.getNoPieces()) * discount.getPriceTotal() + (noPieces % discount.getNoPieces()) * watch.getPrice();
 			}

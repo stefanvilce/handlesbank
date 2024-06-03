@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 
 class WatchTest {
 	
-	Watch watch = new Watch("001", "First w",30,"");
+	Watch watch = new Watch("001", "First w",30, null);
 
 	@Test
 	void testWatch() {
 		assertEquals("001", watch.getId());
 		assertEquals("First w", watch.getName());
 		assertEquals(30, watch.getPrice());
-		assertEquals("", watch.getDiscount());
+		assertTrue(watch.getDiscount() == null);
 	}
 	
 	
