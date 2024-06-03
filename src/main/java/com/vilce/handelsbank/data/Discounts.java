@@ -17,5 +17,15 @@ public class Discounts {
 	public List<Discount> getList() {
 		return list;
 	}
+	
+	public Discount findDiscount(String nameDiscount) {
+	    for(Discount discount : list) {
+	        if(discount.getName().equals(nameDiscount)) {
+	            return discount;
+	        }
+	    }
+	    return null;
+	}
+	
 
 }
